@@ -1,0 +1,1539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Courses - Learn Anything, On Your Schedule | Udemy Clone</title>
+  <meta name="description" content="Udemy is an online learning and teaching marketplace with over 213000 courses and 62 million students. Learn programming, marketing, data science and more.">
+  
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- JavaScript -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       1. Navigation Bar
+       ========================================================================== -->
+  <header id="main-header">
+    <div class="navbar">
+      <!-- Logo -->
+      <a href="#" class="nav-logo" id="nav-logo-link">
+        <svg viewBox="0 0 91 34" width="91" height="34" xmlns="http://www.w3.org/2000/svg">
+          <!-- Stylised Caret symbol next to text -->
+          <g fill="#a435f0">
+            <path d="M12 4 L4 14 h5 v10 h6 v-10 h5 z" transform="translate(-1, 0) scale(0.9)"/>
+          </g>
+          <text x="21" y="24" font-family="'Inter', sans-serif" font-weight="800" font-size="23" fill="#2d2f31" letter-spacing="-1.2">udemy</text>
+        </svg>
+      </a>
+
+      <!-- Categories Dropdown Trigger -->
+      <div class="nav-categories" id="nav-categories-dropdown">
+        <div class="nav-categories-trigger">Categories</div>
+        <!-- Dropdown Menu -->
+        <ul class="dropdown-menu">
+          <li class="dropdown-item">
+            Development <i class="fa-solid fa-chevron-right"></i>
+            <ul class="sub-dropdown-menu">
+              <li class="dropdown-item">Web Development</li>
+              <li class="dropdown-item">Data Science</li>
+              <li class="dropdown-item">Mobile Development</li>
+              <li class="dropdown-item">Programming Languages</li>
+              <li class="dropdown-item">Game Development</li>
+              <li class="dropdown-item">Software Testing</li>
+            </ul>
+          </li>
+          <li class="dropdown-item">
+            Business <i class="fa-solid fa-chevron-right"></i>
+            <ul class="sub-dropdown-menu">
+              <li class="dropdown-item">Entrepreneurship</li>
+              <li class="dropdown-item">Communication</li>
+              <li class="dropdown-item">Management</li>
+              <li class="dropdown-item">Sales</li>
+              <li class="dropdown-item">Business Strategy</li>
+            </ul>
+          </li>
+          <li class="dropdown-item">Finance & Accounting</li>
+          <li class="dropdown-item">
+            IT & Software <i class="fa-solid fa-chevron-right"></i>
+            <ul class="sub-dropdown-menu">
+              <li class="dropdown-item">IT Certifications</li>
+              <li class="dropdown-item">Network & Security</li>
+              <li class="dropdown-item">Hardware</li>
+              <li class="dropdown-item">Operating Systems</li>
+            </ul>
+          </li>
+          <li class="dropdown-item">Office Productivity</li>
+          <li class="dropdown-item">Personal Development</li>
+          <li class="dropdown-item">
+            Design <i class="fa-solid fa-chevron-right"></i>
+            <ul class="sub-dropdown-menu">
+              <li class="dropdown-item">Web Design</li>
+              <li class="dropdown-item">Graphic Design</li>
+              <li class="dropdown-item">Design Tools</li>
+              <li class="dropdown-item">User Experience Design</li>
+              <li class="dropdown-item">3D & Animation</li>
+            </ul>
+          </li>
+          <li class="dropdown-item">Marketing</li>
+          <li class="dropdown-item">Lifestyle</li>
+          <li class="dropdown-item">Photography & Video</li>
+          <li class="dropdown-item">Health & Fitness</li>
+          <li class="dropdown-item">Music</li>
+        </ul>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="nav-search">
+        <form class="search-form" action="#" method="GET" id="search-bar-form">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input type="text" class="search-input" id="search-input-field" placeholder="Search for anything" autocomplete="off">
+        </form>
+      </div>
+
+      <!-- Nav Links -->
+      <a href="#" class="nav-link" id="nav-link-business">Udemy Business</a>
+      <a href="#" class="nav-link" id="nav-link-teach">Teach on Udemy</a>
+
+      <!-- Shopping Cart -->
+      <a href="#" class="nav-cart" id="shopping-cart-button">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span class="cart-badge" id="cart-badge-count">0</span>
+      </a>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <button class="btn btn-secondary" id="login-button">Log in</button>
+        <button class="btn btn-primary" id="signup-button">Sign up</button>
+        <button class="btn btn-secondary btn-icon" id="language-selector-button">
+          <i class="fa-solid fa-globe"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         2. Hero Section
+         ========================================================================== -->
+    <section class="hero-section" id="hero-banner-section">
+      <img src="assets/hero_banner.png" alt="Learn on your schedule" class="hero-img">
+      <div class="container hero-container">
+        <div class="hero-card" id="hero-promo-card">
+          <h1>Learning that gets you</h1>
+          <p>Skills for your present (and your future). Get started with us today. Explore programming, data science, design, and more. Course sales starting at $14.99.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         3. Partners/Logos Section
+         ========================================================================== -->
+    <section class="logos-section" id="partners-logos-section">
+      <div class="container">
+        <h2 class="logos-title">Trusted by over 15,000 companies and millions of learners worldwide</h2>
+        <div class="logos-container">
+          <!-- Nasdaq Logo -->
+          <svg class="partner-logo" viewBox="0 0 100 30" width="80" xmlns="http://www.w3.org/2000/svg">
+            <text x="0" y="22" font-family="'Inter', sans-serif" font-weight="800" font-style="italic" font-size="20">Nasdaq</text>
+          </svg>
+          <!-- Volkswagen Logo -->
+          <svg class="partner-logo" viewBox="0 0 50 50" width="40" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="25" cy="25" r="23" stroke="currentColor" stroke-width="4" fill="none" />
+            <path d="M11 15 L20 38 L25 25 L30 38 L39 15 M15 15 L25 35 L35 15" stroke="currentColor" stroke-width="3" fill="none" stroke-linejoin="round" />
+          </svg>
+          <!-- Box Logo -->
+          <svg class="partner-logo" viewBox="0 0 80 30" width="70" xmlns="http://www.w3.org/2000/svg">
+            <text x="0" y="22" font-family="'Inter', sans-serif" font-weight="800" font-size="24" letter-spacing="-1">box</text>
+          </svg>
+          <!-- NetApp Logo -->
+          <svg class="partner-logo" viewBox="0 0 100 30" width="80" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 25 L10 5 L25 5 L25 25 M35 5 L55 25 L55 5" stroke="currentColor" stroke-width="4" fill="none" />
+            <text x="63" y="22" font-family="'Inter', sans-serif" font-weight="700" font-size="16">NetApp</text>
+          </svg>
+          <!-- Eventbrite Logo -->
+          <svg class="partner-logo" viewBox="0 0 120 30" width="100" xmlns="http://www.w3.org/2000/svg">
+            <text x="0" y="22" font-family="'Inter', sans-serif" font-weight="800" font-size="20" letter-spacing="1">eventbrite</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         4. Featured Courses Section
+         ========================================================================== -->
+    <section class="courses-section" id="featured-courses-panel">
+      <div class="container">
+        <h2 class="section-title">A broad selection of courses</h2>
+        <p class="section-desc">Choose from over 210,000 online video courses with new additions published every month</p>
+        
+        <!-- Tab Bar -->
+        <div class="courses-tabs" id="courses-tabs-navigation">
+          <button class="tab-btn active" data-tab="python">Python</button>
+          <button class="tab-btn" data-tab="webdev">Web Development</button>
+          <button class="tab-btn" data-tab="javascript">JavaScript</button>
+          <button class="tab-btn" data-tab="datascience">Data Science</button>
+          <button class="tab-btn" data-tab="design">Design</button>
+        </div>
+
+        <!-- ==================== Tab 1: Python ==================== -->
+        <div class="tab-panel active" id="tab-python">
+          <div class="panel-header">
+            <h3 class="panel-title">Expand your career opportunities with Python</h3>
+            <p class="panel-desc">Take one of Udemy's range of Python courses and learn how to write clean, efficient code. From Python basics to web development, machine learning, and data visualization, we have a course for you.</p>
+            <div class="panel-cta">
+              <button class="btn btn-secondary">Explore Python</button>
+            </div>
+          </div>
+          
+          <div class="courses-grid">
+            <!-- Card 1 (pop-right) -->
+            <div class="course-card pop-right">
+              <div class="course-img-wrapper">
+                <img src="assets/course_python.png" alt="Python course" class="course-img">
+              </div>
+              <h4 class="course-title">The Complete Python Bootcamp From Zero to Hero in Python</h4>
+              <p class="course-instructor">Jose Portilla</p>
+              <div class="course-rating-container">
+                <span class="course-rating-num">4.7</span>
+                <div class="rating-stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <span class="course-reviews-count">(482,903)</span>
+              </div>
+              <div class="course-price-container">
+                <span class="course-price-current">$14.99</span>
+                <span class="course-price-original">$84.99</span>
+              </div>
+              <div class="course-card-badge">
+                <span class="badge-bestseller">Bestseller</span>
+              </div>
+              
+              <!-- Popover Card -->
+              <div class="course-popover">
+                <div class="pop-title">The Complete Python Bootcamp From Zero to Hero in Python</div>
+                <div class="pop-updated">Updated September 2025</div>
+                <div class="pop-meta">64.5 total hours • All Levels • Subtitles</div>
+                <div class="pop-desc">Learn Python like a Pro! Start from the basics and go all the way to creating your own applications and games.</div>
+                <ul class="pop-bullets">
+                  <li class="pop-bullet-item"><i class="fa-solid fa-check"></i> <span>Learn to use Python professionally, learning both Python 2 and Python 3.</span></li>
+                  <li class="pop-bullet-item"><i class="fa-solid fa-check"></i> <span>Create games with Python, like Tic Tac Toe and Blackjack.</span></li>
+                  <li class="pop-bullet-item"><i class="fa-solid fa-check"></i> <span>Learn advanced Python features, like the collections module.</span></li>
+                </ul>
+                <div class="pop-actions">
+                  <button class="pop-add-cart-btn btn-add-to-cart">Add to cart</button>
+                  <button class="pop-wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 (pop-right) -->
+            <div class="course-card pop-right">
+              <div class="course-img-wrapper">
+                <img src="assets/course_python.png" alt="Python course" class="course-img">
+              </div>
+              <h4 class="course-title">Python for Data Science and Machine Learning Bootcamp</h4>
+              <p class="course-instructor">Jose Portilla</p>
+              <div class="course-rating-container">
+                <span class="course-rating-num">4.6</span>
+                <div class="rating-stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <span class="course-reviews-count">(122,854)</span>
+              </div>
+              <div class="course-price-container">
+                <span class="course-price-current">$15.99</span>
+                <span class="course-price-original">$89.99</span>
+              </div>
+              <div class="course-card-badge">
+                <span class="badge-bestseller">Bestseller</span>
+              </div>
+              
+              <div class="course-popover">
+                <div class="pop-title">Python for Data Science and Machine Learning Bootcamp</div>
+                <div class="pop-updated">Updated October 2025</div>
+                <div class="pop-meta">25 total hours • All Levels • Subtitles</div>
+                <div class="pop-desc">Use NumPy, Pandas, Matplotlib, Scikit-Learn, and more to analyze big data and build machine learning algorithms!</div>
+                <ul class="pop-bullets">
+                  <li class="pop-bullet-item"><i class="fa-solid fa-check"></i> <span>Use Python for Data Science and Machine Learning.</span></li>
+                  <li class="pop-bullet-item"><i class="fa-solid fa-check"></i> <span>Implement Machine Learning Algorithms.</span></li>
+                  <li class="pop-bullet-item"><i class="fa-solid fa-check"></i> <span>Learn NumPy, Pandas, Seaborn, and Scikit-Learn.</span></li>
+                </ul>
+                <div class="pop-actions">
+                  <button class="pop-add-cart-btn btn-add-to-cart">Add to cart</button>
+                  <button class="pop-wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 (pop-right) -->
+            <div class="course-card pop-right">
+              <div class="course-img-wrapper">
+                <img src="assets/course_python.png" alt="Python course" class="course-img">
+              </div>
+              <h4 class="course-title">Learn Python Programming Masterclass</h4>
+              <p class="course-instructor">Jean-Paul Roberts</p>
+              <div class="course-rating-container">
+                <span class="course-rating-num">4.5</span>
+                <div class="rating-stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <span class="course-reviews-count">(89,431)</span>
+              </div>
+              <div class="course-price-container">
+                <span class="course-price-current">$13.99</span>
+                <span class="course-price-original">$79.99</span>
+              </div>
+              
+              <div class="course-popover">
+                <div class="pop-title">Learn Python Programming Masterclass</div>
+                <div class="pop-updated">Updated August 2025</div>
+                <div class="pop-meta">42 total hours • Beginner to Advanced • Subtitles</div>
+                <div class="pop-desc">This Python course covers basic programming topics, object-oriented concepts, databases, and GUI development.</div>
+                <ul class="pop-bullets">
+                  <li class="pop-bullet-item"><i class="fa-solid fa-check"></i> <span>Understand both Python 2 and Python 3.</span></li>
+                  <li class="pop-bullet-item"><i class="fa-solid fa-check"></i> <span>Acquire essential Python skills for machine learning and web development.</span></li>
+                </ul>
+                <div class="pop-actions">
+                  <button class="pop-add-cart-btn btn-add-to-cart">Add to cart</button>
+                  <button class="pop-wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4 (pop-left) -->
+            <div class="course-card pop-left">
+              <div class="course-img-wrapper">
+                <img src="assets/course_python.png" alt="Python course" class="course-img">
+              </div>
+              <h4 class="course-title">Automate the Boring Stuff with Python Programming</h4>
+              <p class="course-instructor">Al Sweigart</p>
+              <div class="course-rating-container">
+                <span class="course-rating-num">4.7</span>
+                <div class="rating-stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <span class="course-reviews-count">(108,310)</span>
+              </div>
+              <div class="course-price-container">
+                <span class="course-price-current">$14.99</span>
+                <span class="course-price-original">$84.99</span>
+              </div>
+              
+              <div class="course-popover">
+                <div class="pop-title">Automate the Boring Stuff with Python Programming</div>
+                <div class="pop-updated">Updated November 2025</div>
+                <div class="pop-meta">9.5 total hours • Beginner • Subtitles</div>
+                <div class="pop-desc">A practical programming course for office workers, academics, and administrators who want to boost productivity.</div>
+                <ul class="pop-bullets">
+                  <li class="pop-bullet-item"><i class="fa-solid fa-check"></i> <span>Write programs that can parse web pages and download content.</span></li>
+                  <li class="pop-bullet-item"><i class="fa-solid fa-check"></i> <span>Send email and text notifications from script execution.</span></li>
+                </ul>
+                <div class="pop-actions">
+                  <button class="pop-add-cart-btn btn-add-to-cart">Add to cart</button>
+                  <button class="pop-wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 5 (pop-left) -->
+            <div class="course-card pop-left">
+              <div class="course-img-wrapper">
+                <img src="assets/course_python.png" alt="Python course" class="course-img">
+              </div>
+              <h4 class="course-title">100 Days of Code: The Complete Python Pro Bootcamp</h4>
+              <p class="course-instructor">Dr. Angela Yu</p>
+              <div class="course-rating-container">
+                <span class="course-rating-num">4.8</span>
+                <div class="rating-stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <span class="course-reviews-count">(215,900)</span>
+              </div>
+              <div class="course-price-container">
+                <span class="course-price-current">$14.99</span>
+                <span class="course-price-original">$84.99</span>
+              </div>
+              <div class="course-card-badge">
+                <span class="badge-bestseller">Bestseller</span>
+              </div>
+              
+              <div class="course-popover">
+                <div class="pop-title">100 Days of Code: The Complete Python Pro Bootcamp for 2026</div>
+                <div class="pop-updated">Updated January 2026</div>
+                <div class="pop-meta">101 total hours • All Levels • Subtitles</div>
+                <div class="pop-desc">Master Python by building 100 projects in 100 days. Learn data science, automation, games, APIs, and web dev.</div>
+                <ul class="pop-bullets">
+                  <li class="pop-bullet-item"><i class="fa-solid fa-check"></i> <span>Build 100 professional projects in 100 days.</span></li>
+                  <li class="pop-bullet-item"><i class="fa-solid fa-check"></i> <span>Build websites, games, data analysis models, and apps.</span></li>
+                </ul>
+                <div class="pop-actions">
+                  <button class="pop-add-cart-btn btn-add-to-cart">Add to cart</button>
+                  <button class="pop-wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== Tab 2: Web Dev ==================== -->
+        <div class="tab-panel" id="tab-webdev">
+          <div class="panel-header">
+            <h3 class="panel-title">Build websites and web applications with modern HTML, CSS, & JS</h3>
+            <p class="panel-desc">Establish a strong foundation in frontend and backend development. Our web development courses cover the full development lifecycle using HTML5, CSS3, JavaScript, React, and Node.js.</p>
+            <div class="panel-cta">
+              <button class="btn btn-secondary">Explore Web Development</button>
+            </div>
+          </div>
+          
+          <div class="courses-grid">
+            <!-- Card 1 -->
+            <div class="course-card pop-right">
+              <div class="course-img-wrapper">
+                <img src="assets/course_webdev.png" alt="Web Dev course" class="course-img">
+              </div>
+              <h4 class="course-title">The Web Developer Bootcamp 2026</h4>
+              <p class="course-instructor">Colt Steele</p>
+              <div class="course-rating-container">
+                <span class="course-rating-num">4.8</span>
+                <div class="rating-stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <span class="course-reviews-count">(280,410)</span>
+              </div>
+              <div class="course-price-container">
+                <span class="course-price-current">$14.99</span>
+                <span class="course-price-original">$84.99</span>
+              </div>
+              <div class="course-card-badge">
+                <span class="badge-bestseller">Bestseller</span>
+              </div>
+              
+              <div class="course-popover">
+                <div class="pop-title">The Web Developer Bootcamp 2026</div>
+                <div class="pop-updated">Updated April 2026</div>
+                <div class="pop-meta">74 total hours • Beginner • Subtitles</div>
+                <div class="pop-desc">The only course you need to learn web development - HTML, CSS, JS, Node, and more!</div>
+                <ul class="pop-bullets">
+                  <li class="pop-bullet-item"><i class="fa-solid fa-check"></i> <span>Learn fullstack web development from scratch.</span></li>
+                  <li class="pop-bullet-item"><i class="fa-solid fa-check"></i> <span>Build responsive apps with React, Express, and MongoDB.</span></li>
+                </ul>
+                <div class="pop-actions">
+                  <button class="pop-add-cart-btn btn-add-to-cart">Add to cart</button>
+                  <button class="pop-wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="course-card pop-right">
+              <div class="course-img-wrapper">
+                <img src="assets/course_webdev.png" alt="Web Dev course" class="course-img">
+              </div>
+              <h4 class="course-title">The Complete 2026 Web Development Bootcamp</h4>
+              <p class="course-instructor">Dr. Angela Yu</p>
+              <div class="course-rating-container">
+                <span class="course-rating-num">4.8</span>
+                <div class="rating-stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <span class="course-reviews-count">(340,120)</span>
+              </div>
+              <div class="course-price-container">
+                <span class="course-price-current">$14.99</span>
+                <span class="course-price-original">$84.99</span>
+              </div>
+              <div class="course-card-badge">
+                <span class="badge-bestseller">Bestseller</span>
+              </div>
+              
+              <div class="course-popover">
+                <div class="pop-title">The Complete 2026 Web Development Bootcamp</div>
+                <div class="pop-updated">Updated May 2026</div>
+                <div class="pop-meta">65 total hours • All Levels • Subtitles</div>
+                <div class="pop-desc">Become a fullstack web developer in one course. HTML, CSS, Javascript, Node, React, PostgreSQL, and Web3.</div>
+                <ul class="pop-bullets">
+                  <li class="pop-bullet-item"><i class="fa-solid fa-check"></i> <span>Build custom websites and real-world projects.</span></li>
+                  <li class="pop-bullet-item"><i class="fa-solid fa-check"></i> <span>Master React, Node, Web3, and more.</span></li>
+                </ul>
+                <div class="pop-actions">
+                  <button class="pop-add-cart-btn btn-add-to-cart">Add to cart</button>
+                  <button class="pop-wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="course-card pop-right">
+              <div class="course-img-wrapper">
+                <img src="assets/course_webdev.png" alt="Web Dev course" class="course-img">
+              </div>
+              <h4 class="course-title">JavaScript: The Advanced Concepts (2026 Update)</h4>
+              <p class="course-instructor">Andrei Neagoie</p>
+              <div class="course-rating-container">
+                <span class="course-rating-num">4.7</span>
+                <div class="rating-stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <span class="course-reviews-count">(35,420)</span>
+              </div>
+              <div class="course-price-container">
+                <span class="course-price-current">$15.99</span>
+                <span class="course-price-original">$89.99</span>
+              </div>
+              
+              <div class="course-popover">
+                <div class="pop-title">JavaScript: The Advanced Concepts (2026 Update)</div>
+                <div class="pop-updated">Updated February 2026</div>
+                <div class="pop-meta">25.5 total hours • Intermediate to Advanced • Subtitles</div>
+                <div class="pop-desc">Learn modern JavaScript concepts, closure, prototypes, V8 engine, modules, memory leaks, and async patterns.</div>
+                <ul class="pop-bullets">
+                  <li class="pop-bullet-item"><i class="fa-solid fa-check"></i> <span>Understand how JS runs under the hood.</span></li>
+                  <li class="pop-bullet-item"><i class="fa-solid fa-check"></i> <span>Write optimized, memory-efficient code.</span></li>
+                </ul>
+                <div class="pop-actions">
+                  <button class="pop-add-cart-btn btn-add-to-cart">Add to cart</button>
+                  <button class="pop-wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="course-card pop-left">
+              <div class="course-img-wrapper">
+                <img src="assets/course_webdev.png" alt="Web Dev course" class="course-img">
+              </div>
+              <h4 class="course-title">CSS - The Complete Guide 2026 (incl. Flexbox, Grid & Sass)</h4>
+              <p class="course-instructor">Maximilian Schwarzmüller</p>
+              <div class="course-rating-container">
+                <span class="course-rating-num">4.7</span>
+                <div class="rating-stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <span class="course-reviews-count">(78,920)</span>
+              </div>
+              <div class="course-price-container">
+                <span class="course-price-current">$13.99</span>
+                <span class="course-price-original">$79.99</span>
+              </div>
+              
+              <div class="course-popover">
+                <div class="pop-title">CSS - The Complete Guide 2026 (incl. Flexbox, Grid & Sass)</div>
+                <div class="pop-updated">Updated January 2026</div>
+                <div class="pop-meta">30 total hours • All Levels • Subtitles</div>
+                <div class="pop-desc">Learn CSS from the ground up, all the way to advanced layouts, animations, transitions, and preprocessing.</div>
+                <ul class="pop-bullets">
+                  <li class="pop-bullet-item"><i class="fa-solid fa-check"></i> <span>Master Flexbox, CSS Grid, animations, and variables.</span></li>
+                  <li class="pop-bullet-item"><i class="fa-solid fa-check"></i> <span>Create layouts matching real-world designs.</span></li>
+                </ul>
+                <div class="pop-actions">
+                  <button class="pop-add-cart-btn btn-add-to-cart">Add to cart</button>
+                  <button class="pop-wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="course-card pop-left">
+              <div class="course-img-wrapper">
+                <img src="assets/course_webdev.png" alt="Web Dev course" class="course-img">
+              </div>
+              <h4 class="course-title">Modern HTML & CSS From The Beginning (Including Sass)</h4>
+              <p class="course-instructor">Brad Traversy</p>
+              <div class="course-rating-container">
+                <span class="course-rating-num">4.8</span>
+                <div class="rating-stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <span class="course-reviews-count">(42,150)</span>
+              </div>
+              <div class="course-price-container">
+                <span class="course-price-current">$14.99</span>
+                <span class="course-price-original">$84.99</span>
+              </div>
+              
+              <div class="course-popover">
+                <div class="pop-title">Modern HTML & CSS From The Beginning (Including Sass)</div>
+                <div class="pop-updated">Updated November 2025</div>
+                <div class="pop-meta">21 total hours • Beginner • Subtitles</div>
+                <div class="pop-desc">Build responsive website layouts using HTML5, semantic elements, CSS3 variables, animations, Flexbox, and Grid.</div>
+                <ul class="pop-bullets">
+                  <li class="pop-bullet-item"><i class="fa-solid fa-check"></i> <span>Build production-ready, semantic layouts.</span></li>
+                  <li class="pop-bullet-item"><i class="fa-solid fa-check"></i> <span>Implement custom styling and modern UI components.</span></li>
+                </ul>
+                <div class="pop-actions">
+                  <button class="pop-add-cart-btn btn-add-to-cart">Add to cart</button>
+                  <button class="pop-wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== Tab 3: JavaScript ==================== -->
+        <div class="tab-panel" id="tab-javascript">
+          <div class="panel-header">
+            <h3 class="panel-title">Master JavaScript and build dynamic web experiences</h3>
+            <p class="panel-desc">JavaScript is the core language powering the modern web. Learn everything from fundamentals, closures, and async programming to object-oriented architecture and browser API integrations.</p>
+            <div class="panel-cta">
+              <button class="btn btn-secondary">Explore JavaScript</button>
+            </div>
+          </div>
+          
+          <div class="courses-grid">
+            <!-- Card 1 -->
+            <div class="course-card pop-right">
+              <div class="course-img-wrapper">
+                <img src="assets/course_webdev.png" alt="JavaScript course" class="course-img">
+              </div>
+              <h4 class="course-title">The Complete JavaScript Course 2026: From Zero to Expert!</h4>
+              <p class="course-instructor">Jonas Schmedtmann</p>
+              <div class="course-rating-container">
+                <span class="course-rating-num">4.8</span>
+                <div class="rating-stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <span class="course-reviews-count">(190,520)</span>
+              </div>
+              <div class="course-price-container">
+                <span class="course-price-current">$14.99</span>
+                <span class="course-price-original">$84.99</span>
+              </div>
+              <div class="course-card-badge">
+                <span class="badge-bestseller">Bestseller</span>
+              </div>
+              
+              <div class="course-popover">
+                <div class="pop-title">The Complete JavaScript Course 2026: From Zero to Expert!</div>
+                <div class="pop-updated">Updated April 2026</div>
+                <div class="pop-meta">68.5 total hours • All Levels • Subtitles</div>
+                <div class="pop-desc">The modern JavaScript course for everyone! Master JavaScript with projects, challenges, theory, and ES6+.</div>
+                <ul class="pop-bullets">
+                  <li class="pop-bullet-item"><i class="fa-solid fa-check"></i> <span>Become an advanced, confident JavaScript developer.</span></li>
+                  <li class="pop-bullet-item"><i class="fa-solid fa-check"></i> <span>Understand complex concepts like execution context, OOP, and APIs.</span></li>
+                </ul>
+                <div class="pop-actions">
+                  <button class="pop-add-cart-btn btn-add-to-cart">Add to cart</button>
+                  <button class="pop-wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="course-card pop-right">
+              <div class="course-img-wrapper">
+                <img src="assets/course_webdev.png" alt="JavaScript course" class="course-img">
+              </div>
+              <h4 class="course-title">JavaScript: The Definitive Guide for Beginners</h4>
+              <p class="course-instructor">Mosh Hamedani</p>
+              <div class="course-rating-container">
+                <span class="course-rating-num">4.6</span>
+                <div class="rating-stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <span class="course-reviews-count">(55,310)</span>
+              </div>
+              <div class="course-price-container">
+                <span class="course-price-current">$13.99</span>
+                <span class="course-price-original">$79.99</span>
+              </div>
+              
+              <div class="course-popover">
+                <div class="pop-title">JavaScript: The Definitive Guide for Beginners</div>
+                <div class="pop-updated">Updated August 2025</div>
+                <div class="pop-meta">6 total hours • Beginner • Subtitles</div>
+                <div class="pop-desc">A highly focused course designed to teach you JavaScript essentials in the shortest time possible.</div>
+                <ul class="pop-bullets">
+                  <li class="pop-bullet-item"><i class="fa-solid fa-check"></i> <span>Understand variables, operators, conditional loops, and arrays.</span></li>
+                  <li class="pop-bullet-item"><i class="fa-solid fa-check"></i> <span>Build simple algorithmic solvers.</span></li>
+                </ul>
+                <div class="pop-actions">
+                  <button class="pop-add-cart-btn btn-add-to-cart">Add to cart</button>
+                  <button class="pop-wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="course-card pop-right">
+              <div class="course-img-wrapper">
+                <img src="assets/course_webdev.png" alt="JavaScript course" class="course-img">
+              </div>
+              <h4 class="course-title">ES6 JavaScript: The Complete Developer's Guide</h4>
+              <p class="course-instructor">Stephen Grider</p>
+              <div class="course-rating-container">
+                <span class="course-rating-num">4.7</span>
+                <div class="rating-stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <span class="course-reviews-count">(48,930)</span>
+              </div>
+              <div class="course-price-container">
+                <span class="course-price-current">$14.99</span>
+                <span class="course-price-original">$84.99</span>
+              </div>
+              
+              <div class="course-popover">
+                <div class="pop-title">ES6 JavaScript: The Complete Developer's Guide</div>
+                <div class="pop-updated">Updated December 2025</div>
+                <div class="pop-meta">10 total hours • All Levels • Subtitles</div>
+                <div class="pop-desc">Learn ES6 features including arrays, arrow functions, destructuring, classes, generators, and promises.</div>
+                <ul class="pop-bullets">
+                  <li class="pop-bullet-item"><i class="fa-solid fa-check"></i> <span>Apply modern ECMAScript standard syntax.</span></li>
+                  <li class="pop-bullet-item"><i class="fa-solid fa-check"></i> <span>Integrate async patterns and API requests.</span></li>
+                </ul>
+                <div class="pop-actions">
+                  <button class="pop-add-cart-btn btn-add-to-cart">Add to cart</button>
+                  <button class="pop-wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="course-card pop-left">
+              <div class="course-img-wrapper">
+                <img src="assets/course_webdev.png" alt="JavaScript course" class="course-img">
+              </div>
+              <h4 class="course-title">Advanced JavaScript Concepts & Interview Prep</h4>
+              <p class="course-instructor">Tyler McGinnis</p>
+              <div class="course-rating-container">
+                <span class="course-rating-num">4.9</span>
+                <div class="rating-stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <span class="course-reviews-count">(12,410)</span>
+              </div>
+              <div class="course-price-container">
+                <span class="course-price-current">$15.99</span>
+                <span class="course-price-original">$89.99</span>
+              </div>
+              <div class="course-card-badge">
+                <span class="badge-bestseller">Bestseller</span>
+              </div>
+              
+              <div class="course-popover">
+                <div class="pop-title">Advanced JavaScript Concepts & Interview Prep</div>
+                <div class="pop-updated">Updated January 2026</div>
+                <div class="pop-meta">15 total hours • Advanced • Subtitles</div>
+                <div class="pop-desc">Prep for technical interviews. Learn execution contexts, call stacks, lexical scoping, closures, and prototypal inheritance.</div>
+                <ul class="pop-bullets">
+                  <li class="pop-bullet-item"><i class="fa-solid fa-check"></i> <span>Aces coding interviews on Javascript internals.</span></li>
+                  <li class="pop-bullet-item"><i class="fa-solid fa-check"></i> <span>Build robust, framework-agnostic architectural libraries.</span></li>
+                </ul>
+                <div class="pop-actions">
+                  <button class="pop-add-cart-btn btn-add-to-cart">Add to cart</button>
+                  <button class="pop-wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="course-card pop-left">
+              <div class="course-img-wrapper">
+                <img src="assets/course_webdev.png" alt="JavaScript course" class="course-img">
+              </div>
+              <h4 class="course-title">Understanding Weird Parts in JavaScript</h4>
+              <p class="course-instructor">Anthony Alicea</p>
+              <div class="course-rating-container">
+                <span class="course-rating-num">4.8</span>
+                <div class="rating-stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <span class="course-reviews-count">(83,110)</span>
+              </div>
+              <div class="course-price-container">
+                <span class="course-price-current">$14.99</span>
+                <span class="course-price-original">$84.99</span>
+              </div>
+              
+              <div class="course-popover">
+                <div class="pop-title">Understanding Weird Parts in JavaScript</div>
+                <div class="pop-updated">Updated November 2025</div>
+                <div class="pop-meta">12 total hours • Intermediate • Subtitles</div>
+                <div class="pop-desc">Write robust code by exploring scoping, hoisting, closures, prototypal inheritance, and IIFEs.</div>
+                <ul class="pop-bullets">
+                  <li class="pop-bullet-item"><i class="fa-solid fa-check"></i> <span>Master closures, hoisting, scope chains, and execution stack.</span></li>
+                  <li class="pop-bullet-item"><i class="fa-solid fa-check"></i> <span>Write customizable framework structures in pure JS.</span></li>
+                </ul>
+                <div class="pop-actions">
+                  <button class="pop-add-cart-btn btn-add-to-cart">Add to cart</button>
+                  <button class="pop-wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== Tab 4: Data Science ==================== -->
+        <div class="tab-panel" id="tab-datascience">
+          <div class="panel-header">
+            <h3 class="panel-title">Explore big data, artificial intelligence, and statistics</h3>
+            <p class="panel-desc">Analyze complex datasets and construct neural networks. Our data science catalog introduces machine learning, R, statistics, and advanced Deep Learning concepts.</p>
+            <div class="panel-cta">
+              <button class="btn btn-secondary">Explore Data Science</button>
+            </div>
+          </div>
+          
+          <div class="courses-grid">
+            <!-- Card 1 -->
+            <div class="course-card pop-right">
+              <div class="course-img-wrapper">
+                <img src="assets/course_python.png" alt="Data Science course" class="course-img">
+              </div>
+              <h4 class="course-title">Machine Learning A-Z™: AI, Python & R in Data Science</h4>
+              <p class="course-instructor">Kirill Eremenko</p>
+              <div class="course-rating-container">
+                <span class="course-rating-num">4.6</span>
+                <div class="rating-stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <span class="course-reviews-count">(172,310)</span>
+              </div>
+              <div class="course-price-container">
+                <span class="course-price-current">$15.99</span>
+                <span class="course-price-original">$89.99</span>
+              </div>
+              <div class="course-card-badge">
+                <span class="badge-bestseller">Bestseller</span>
+              </div>
+              
+              <div class="course-popover">
+                <div class="pop-title">Machine Learning A-Z™: AI, Python & R in Data Science</div>
+                <div class="pop-updated">Updated March 2026</div>
+                <div class="pop-meta">45 total hours • Beginner to Intermediate • Subtitles</div>
+                <div class="pop-desc">Learn to create Machine Learning Algorithms in Python and R from two Data Science experts. Templates included.</div>
+                <ul class="pop-bullets">
+                  <li class="pop-bullet-item"><i class="fa-solid fa-check"></i> <span>Master Machine Learning on Python & R.</span></li>
+                  <li class="pop-bullet-item"><i class="fa-solid fa-check"></i> <span>Create accurate forecasts and predictions.</span></li>
+                </ul>
+                <div class="pop-actions">
+                  <button class="pop-add-cart-btn btn-add-to-cart">Add to cart</button>
+                  <button class="pop-wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="course-card pop-right">
+              <div class="course-img-wrapper">
+                <img src="assets/course_python.png" alt="Data Science course" class="course-img">
+              </div>
+              <h4 class="course-title">Deep Learning A-Z™ 2026: Hands-On Neural Networks</h4>
+              <p class="course-instructor">Hadelin de Ponteves</p>
+              <div class="course-rating-container">
+                <span class="course-rating-num">4.5</span>
+                <div class="rating-stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <span class="course-reviews-count">(45,920)</span>
+              </div>
+              <div class="course-price-container">
+                <span class="course-price-current">$14.99</span>
+                <span class="course-price-original">$84.99</span>
+              </div>
+              
+              <div class="course-popover">
+                <div class="pop-title">Deep Learning A-Z™ 2026: Hands-On Neural Networks</div>
+                <div class="pop-updated">Updated September 2025</div>
+                <div class="pop-meta">22.5 total hours • All Levels • Subtitles</div>
+                <div class="pop-desc">Learn to build Artificial, Convolutional, Recurrent neural networks in Python using PyTorch and TensorFlow.</div>
+                <ul class="pop-bullets">
+                  <li class="pop-bullet-item"><i class="fa-solid fa-check"></i> <span>Build ANN, CNN, and RNN structures.</span></li>
+                  <li class="pop-bullet-item"><i class="fa-solid fa-check"></i> <span>Apply neural networks to solve practical problems.</span></li>
+                </ul>
+                <div class="pop-actions">
+                  <button class="pop-add-cart-btn btn-add-to-cart">Add to cart</button>
+                  <button class="pop-wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="course-card pop-right">
+              <div class="course-img-wrapper">
+                <img src="assets/course_python.png" alt="Data Science course" class="course-img">
+              </div>
+              <h4 class="course-title">Data Science Methodology & Applied AI Masterclass</h4>
+              <p class="course-instructor">IBM Skills Network</p>
+              <div class="course-rating-container">
+                <span class="course-rating-num">4.7</span>
+                <div class="rating-stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <span class="course-reviews-count">(18,430)</span>
+              </div>
+              <div class="course-price-container">
+                <span class="course-price-current">$16.99</span>
+                <span class="course-price-original">$94.99</span>
+              </div>
+              
+              <div class="course-popover">
+                <div class="pop-title">Data Science Methodology & Applied AI Masterclass</div>
+                <div class="pop-updated">Updated February 2026</div>
+                <div class="pop-meta">18 total hours • Beginner to Intermediate • Subtitles</div>
+                <div class="pop-desc">Explore IBM's scientific roadmap for data analysis, featuring modeling, visualization, data acquisition, and deployment.</div>
+                <ul class="pop-bullets">
+                  <li class="pop-bullet-item"><i class="fa-solid fa-check"></i> <span>Establish an enterprise data science pipeline.</span></li>
+                  <li class="pop-bullet-item"><i class="fa-solid fa-check"></i> <span>Understand predictive and diagnostic modeling.</span></li>
+                </ul>
+                <div class="pop-actions">
+                  <button class="pop-add-cart-btn btn-add-to-cart">Add to cart</button>
+                  <button class="pop-wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="course-card pop-left">
+              <div class="course-img-wrapper">
+                <img src="assets/course_python.png" alt="Data Science course" class="course-img">
+              </div>
+              <h4 class="course-title">R Programming A-Z™: R For Data Science With Real Exercises!</h4>
+              <p class="course-instructor">Kirill Eremenko</p>
+              <div class="course-rating-container">
+                <span class="course-rating-num">4.6</span>
+                <div class="rating-stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <span class="course-reviews-count">(53,210)</span>
+              </div>
+              <div class="course-price-container">
+                <span class="course-price-current">$13.99</span>
+                <span class="course-price-original">$79.99</span>
+              </div>
+              
+              <div class="course-popover">
+                <div class="pop-title">R Programming A-Z™: R For Data Science With Real Exercises!</div>
+                <div class="pop-updated">Updated December 2025</div>
+                <div class="pop-meta">10.5 total hours • All Levels • Subtitles</div>
+                <div class="pop-desc">Learn Programming In R And R Studio. Data Analytics, Data Science, Statistical Analysis, Packages, GGPlot2.</div>
+                <ul class="pop-bullets">
+                  <li class="pop-bullet-item"><i class="fa-solid fa-check"></i> <span>Write clean programs in R studio.</span></li>
+                  <li class="pop-bullet-item"><i class="fa-solid fa-check"></i> <span>Master statistical analysis models.</span></li>
+                </ul>
+                <div class="pop-actions">
+                  <button class="pop-add-cart-btn btn-add-to-cart">Add to cart</button>
+                  <button class="pop-wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="course-card pop-left">
+              <div class="course-img-wrapper">
+                <img src="assets/course_python.png" alt="Data Science course" class="course-img">
+              </div>
+              <h4 class="course-title">Statistics for Data Science and Business Analysis</h4>
+              <p class="course-instructor">365 Careers</p>
+              <div class="course-rating-container">
+                <span class="course-rating-num">4.6</span>
+                <div class="rating-stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <span class="course-reviews-count">(39,410)</span>
+              </div>
+              <div class="course-price-container">
+                <span class="course-price-current">$14.99</span>
+                <span class="course-price-original">$84.99</span>
+              </div>
+              
+              <div class="course-popover">
+                <div class="pop-title">Statistics for Data Science and Business Analysis</div>
+                <div class="pop-updated">Updated November 2025</div>
+                <div class="pop-meta">5 total hours • Beginner • Subtitles</div>
+                <div class="pop-desc">Learn essential statistics concepts: descriptive statistics, hypothesis testing, regression analysis, and ANOVA.</div>
+                <ul class="pop-bullets">
+                  <li class="pop-bullet-item"><i class="fa-solid fa-check"></i> <span>Understand data types, distributions, and variance.</span></li>
+                  <li class="pop-bullet-item"><i class="fa-solid fa-check"></i> <span>Carry out t-tests, correlation, and regressions.</span></li>
+                </ul>
+                <div class="pop-actions">
+                  <button class="pop-add-cart-btn btn-add-to-cart">Add to cart</button>
+                  <button class="pop-wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== Tab 5: Design ==================== -->
+        <div class="tab-panel" id="tab-design">
+          <div class="panel-header">
+            <h3 class="panel-title">Explore graphics, typography, wireframing, & 3D art</h3>
+            <p class="panel-desc">Unleash your creativity and master core design software. Learn Figma, Adobe XD, Photoshop, Illustrator, and Blender with projects that build a premium portfolio.</p>
+            <div class="panel-cta">
+              <button class="btn btn-secondary">Explore Design</button>
+            </div>
+          </div>
+          
+          <div class="courses-grid">
+            <!-- Card 1 -->
+            <div class="course-card pop-right">
+              <div class="course-img-wrapper">
+                <img src="assets/course_design.png" alt="Design course" class="course-img">
+              </div>
+              <h4 class="course-title">User Experience Design Essentials - Adobe XD UI UX</h4>
+              <p class="course-instructor">Daniel Walter Scott</p>
+              <div class="course-rating-container">
+                <span class="course-rating-num">4.7</span>
+                <div class="rating-stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <span class="course-reviews-count">(73,120)</span>
+              </div>
+              <div class="course-price-container">
+                <span class="course-price-current">$14.99</span>
+                <span class="course-price-original">$84.99</span>
+              </div>
+              <div class="course-card-badge">
+                <span class="badge-bestseller">Bestseller</span>
+              </div>
+              
+              <div class="course-popover">
+                <div class="pop-title">User Experience Design Essentials - Adobe XD UI UX Design</div>
+                <div class="pop-updated">Updated April 2026</div>
+                <div class="pop-meta">13 total hours • All Levels • Subtitles</div>
+                <div class="pop-desc">Use Adobe XD to create professional, user-centric wireframes, flowcharts, high-fidelity mockups, and prototypes.</div>
+                <ul class="pop-bullets">
+                  <li class="pop-bullet-item"><i class="fa-solid fa-check"></i> <span>Build UX projects from scratch.</span></li>
+                  <li class="pop-bullet-item"><i class="fa-solid fa-check"></i> <span>Design interactive buttons, forms, headers, and grids.</span></li>
+                </ul>
+                <div class="pop-actions">
+                  <button class="pop-add-cart-btn btn-add-to-cart">Add to cart</button>
+                  <button class="pop-wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="course-card pop-right">
+              <div class="course-img-wrapper">
+                <img src="assets/course_design.png" alt="Design course" class="course-img">
+              </div>
+              <h4 class="course-title">Ultimate Photoshop Training: From Beginner to Pro</h4>
+              <p class="course-instructor">Cristian Doru Barin</p>
+              <div class="course-rating-container">
+                <span class="course-rating-num">4.8</span>
+                <div class="rating-stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <span class="course-reviews-count">(98,410)</span>
+              </div>
+              <div class="course-price-container">
+                <span class="course-price-current">$14.99</span>
+                <span class="course-price-original">$84.99</span>
+              </div>
+              <div class="course-card-badge">
+                <span class="badge-bestseller">Bestseller</span>
+              </div>
+              
+              <div class="course-popover">
+                <div class="pop-title">Ultimate Photoshop Training: From Beginner to Pro</div>
+                <div class="pop-updated">Updated March 2026</div>
+                <div class="pop-meta">15 total hours • All Levels • Subtitles</div>
+                <div class="pop-desc">Master Photoshop with creative image editing, color correction, layered composites, and poster design projects.</div>
+                <ul class="pop-bullets">
+                  <li class="pop-bullet-item"><i class="fa-solid fa-check"></i> <span>Use selections, adjustment layers, masks.</span></li>
+                  <li class="pop-bullet-item"><i class="fa-solid fa-check"></i> <span>Create high-quality graphic assets.</span></li>
+                </ul>
+                <div class="pop-actions">
+                  <button class="pop-add-cart-btn btn-add-to-cart">Add to cart</button>
+                  <button class="pop-wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="course-card pop-right">
+              <div class="course-img-wrapper">
+                <img src="assets/course_design.png" alt="Design course" class="course-img">
+              </div>
+              <h4 class="course-title">Figma UI UX Design Essentials Masterclass</h4>
+              <p class="course-instructor">Daniel Walter Scott</p>
+              <div class="course-rating-container">
+                <span class="course-rating-num">4.7</span>
+                <div class="rating-stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <span class="course-reviews-count">(52,190)</span>
+              </div>
+              <div class="course-price-container">
+                <span class="course-price-current">$14.99</span>
+                <span class="course-price-original">$84.99</span>
+              </div>
+              
+              <div class="course-popover">
+                <div class="pop-title">Figma UI UX Design Essentials Masterclass</div>
+                <div class="pop-updated">Updated May 2026</div>
+                <div class="pop-meta">11.5 total hours • Beginner to Intermediate • Subtitles</div>
+                <div class="pop-desc">Master components, auto-layouts, variations, interactive prototypes, and design systems in Figma.</div>
+                <ul class="pop-bullets">
+                  <li class="pop-bullet-item"><i class="fa-solid fa-check"></i> <span>Build reusable component libraries with variants.</span></li>
+                  <li class="pop-bullet-item"><i class="fa-solid fa-check"></i> <span>Create smooth transitions and interactions.</span></li>
+                </ul>
+                <div class="pop-actions">
+                  <button class="pop-add-cart-btn btn-add-to-cart">Add to cart</button>
+                  <button class="pop-wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="course-card pop-left">
+              <div class="course-img-wrapper">
+                <img src="assets/course_design.png" alt="Design course" class="course-img">
+              </div>
+              <h4 class="course-title">Complete Blender Creator: Learn 3D Modelling</h4>
+              <p class="course-instructor">GameDev.tv</p>
+              <div class="course-rating-container">
+                <span class="course-rating-num">4.8</span>
+                <div class="rating-stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <span class="course-reviews-count">(64,220)</span>
+              </div>
+              <div class="course-price-container">
+                <span class="course-price-current">$15.99</span>
+                <span class="course-price-original">$89.99</span>
+              </div>
+              
+              <div class="course-popover">
+                <div class="pop-title">Complete Blender Creator: Learn 3D Modelling for Beginners</div>
+                <div class="pop-updated">Updated January 2026</div>
+                <div class="pop-meta">42 total hours • All Levels • Subtitles</div>
+                <div class="pop-desc">Use Blender to create 3D models, textures, animations, lighting and renders for games and illustration.</div>
+                <ul class="pop-bullets">
+                  <li class="pop-bullet-item"><i class="fa-solid fa-check"></i> <span>Understand Blender's layout interface.</span></li>
+                  <li class="pop-bullet-item"><i class="fa-solid fa-check"></i> <span>Model structures, characters, and assets.</span></li>
+                </ul>
+                <div class="pop-actions">
+                  <button class="pop-add-cart-btn btn-add-to-cart">Add to cart</button>
+                  <button class="pop-wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="course-card pop-left">
+              <div class="course-img-wrapper">
+                <img src="assets/course_design.png" alt="Design course" class="course-img">
+              </div>
+              <h4 class="course-title">Graphic Design Masterclass - Learn GREAT Design</h4>
+              <p class="course-instructor">Lindsay Marsh</p>
+              <div class="course-rating-container">
+                <span class="course-rating-num">4.7</span>
+                <div class="rating-stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <span class="course-reviews-count">(38,910)</span>
+              </div>
+              <div class="course-price-container">
+                <span class="course-price-current">$14.99</span>
+                <span class="course-price-original">$84.99</span>
+              </div>
+              
+              <div class="course-popover">
+                <div class="pop-title">Graphic Design Masterclass - Learn GREAT Design</div>
+                <div class="pop-updated">Updated October 2025</div>
+                <div class="pop-meta">29 total hours • Beginner to Advanced • Subtitles</div>
+                <div class="pop-desc">Master Photoshop, Illustrator, and InDesign. Learn typography, layout design, branding, and color theory.</div>
+                <ul class="pop-bullets">
+                  <li class="pop-bullet-item"><i class="fa-solid fa-check"></i> <span>Master professional layout structures.</span></li>
+                  <li class="pop-bullet-item"><i class="fa-solid fa-check"></i> <span>Create vector assets and brand materials.</span></li>
+                </ul>
+                <div class="pop-actions">
+                  <button class="pop-add-cart-btn btn-add-to-cart">Add to cart</button>
+                  <button class="pop-wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         5. Course Categories Section
+         ========================================================================== -->
+    <section class="categories-section" id="course-categories-grid">
+      <div class="container">
+        <h2 class="section-title" style="font-size: 24px; margin-bottom: 24px;">Top categories</h2>
+        <div class="categories-grid">
+          <!-- Card 1 -->
+          <div class="category-card">
+            <div class="category-img-wrapper">
+              <i class="fa-solid fa-pen-nib"></i>
+            </div>
+            <h3 class="category-title">Design</h3>
+          </div>
+          <!-- Card 2 -->
+          <div class="category-card">
+            <div class="category-img-wrapper">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <h3 class="category-title">Development</h3>
+          </div>
+          <!-- Card 3 -->
+          <div class="category-card">
+            <div class="category-img-wrapper">
+              <i class="fa-solid fa-bullhorn"></i>
+            </div>
+            <h3 class="category-title">Marketing</h3>
+          </div>
+          <!-- Card 4 -->
+          <div class="category-card">
+            <div class="category-img-wrapper">
+              <i class="fa-solid fa-server"></i>
+            </div>
+            <h3 class="category-title">IT and Software</h3>
+          </div>
+          <!-- Card 5 -->
+          <div class="category-card">
+            <div class="category-img-wrapper">
+              <i class="fa-solid fa-heart-pulse"></i>
+            </div>
+            <h3 class="category-title">Personal Development</h3>
+          </div>
+          <!-- Card 6 -->
+          <div class="category-card">
+            <div class="category-img-wrapper">
+              <i class="fa-solid fa-briefcase"></i>
+            </div>
+            <h3 class="category-title">Business</h3>
+          </div>
+          <!-- Card 7 -->
+          <div class="category-card">
+            <div class="category-img-wrapper">
+              <i class="fa-solid fa-camera"></i>
+            </div>
+            <h3 class="category-title">Photography</h3>
+          </div>
+          <!-- Card 8 -->
+          <div class="category-card">
+            <div class="category-img-wrapper">
+              <i class="fa-solid fa-music"></i>
+            </div>
+            <h3 class="category-title">Music</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         6. Learning Goals / Value Proposition Section
+         ========================================================================== -->
+    <section class="goals-section" id="learning-goals-panel">
+      <div class="container">
+        <div class="goals-grid">
+          <!-- Goal 1 -->
+          <div class="goal-card">
+            <div class="goal-icon">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <div class="goal-content">
+              <h3>Learn at your own pace</h3>
+              <p>Enjoy lifetime access to courses on Udemy's website. Study topics in-depth on your desktop workspace.</p>
+            </div>
+          </div>
+          <!-- Goal 2 -->
+          <div class="goal-card">
+            <div class="goal-icon">
+              <i class="fa-solid fa-user-tie"></i>
+            </div>
+            <div class="goal-content">
+              <h3>Learn from industry experts</h3>
+              <p>Find the right instructor for you, with real-world practical experience to share on every coding tool.</p>
+            </div>
+          </div>
+          <!-- Goal 3 -->
+          <div class="goal-card">
+            <div class="goal-icon">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <div class="goal-content">
+              <h3>Find high-quality videos</h3>
+              <p>Choose from over 210,000 video courses on various topics, with additions published every single month.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         7. Student Reviews Section
+         ========================================================================== -->
+    <section class="reviews-section" id="student-reviews-panel">
+      <div class="container">
+        <h2 class="section-title" style="font-size: 24px; margin-bottom: 24px;">How learners like you are achieving their goals</h2>
+        <div class="reviews-grid">
+          <!-- Card 1 -->
+          <div class="review-card">
+            <div>
+              <div class="review-quote-icon">“</div>
+              <p class="review-text">I am proud to say that after taking this course, I passed the AWS Certified Cloud Practitioner exam! I'm now studying for the Solutions Architect. The explanations were exceptionally clear.</p>
+            </div>
+            <div class="review-user-container">
+              <div class="review-user">
+                <div class="review-avatar" style="background-color: #6a6f73;">WA</div>
+                <div>
+                  <h4 class="review-username">Will A.</h4>
+                </div>
+              </div>
+              <a href="#" class="review-course-link">
+                <i class="fa-solid fa-circle-play"></i> [AWS Certified Cloud Practitioner - 2026]
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="review-card">
+            <div>
+              <div class="review-quote-icon">“</div>
+              <p class="review-text">This Python bootcamp is spectacular! Jose covers every single detail. I went from having zero coding knowledge to writing custom file automation scripts for my day job in just 2 months.</p>
+            </div>
+            <div class="review-user-container">
+              <div class="review-user">
+                <div class="review-avatar" style="background-color: #5624d0;">JS</div>
+                <div>
+                  <h4 class="review-username">John S.</h4>
+                </div>
+              </div>
+              <a href="#" class="review-course-link">
+                <i class="fa-solid fa-circle-play"></i> [The Complete Python Bootcamp From Zero to Hero]
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="review-card">
+            <div>
+              <div class="review-quote-icon">“</div>
+              <p class="review-text">Colt Steele's explanation of complex CSS patterns like grid and flexbox made web design feel so intuitive. Truly an outstanding course with high production values and exercises.</p>
+            </div>
+            <div class="review-user-container">
+              <div class="review-user">
+                <div class="review-avatar" style="background-color: #2b1b72;">EF</div>
+                <div>
+                  <h4 class="review-username">Emily F.</h4>
+                </div>
+              </div>
+              <a href="#" class="review-course-link">
+                <i class="fa-solid fa-circle-play"></i> [The Web Developer Bootcamp 2026]
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         8. Instructor Promotion Section
+         ========================================================================== -->
+    <section class="instructor-section" id="instructor-promo-card-section">
+      <div class="container instructor-container">
+        <div class="instructor-img-wrapper">
+          <img src="assets/instructor_promo.png" alt="Become an instructor" class="instructor-img">
+        </div>
+        <div class="instructor-content">
+          <h2 class="instructor-title">Become an instructor</h2>
+          <p class="instructor-desc">Instructors from around the world teach millions of learners on Udemy. We provide the tools and skills to teach what you love. Learn at your own pace and shape the next generation.</p>
+          <button class="btn btn-primary btn-primary-dark" style="height: 48px; padding: 0 24px;">Start teaching today</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       9. Footer
+       ========================================================================== -->
+  <footer id="main-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-top-text">Top companies choose Udemy Business to build in-demand career skills.</div>
+        <div class="footer-logos">
+          <!-- Nasdaq Logo -->
+          <svg class="footer-partner-logo" viewBox="0 0 100 30" width="60" xmlns="http://www.w3.org/2000/svg">
+            <text x="0" y="22" font-family="'Inter', sans-serif" font-weight="800" font-style="italic" font-size="20" fill="#949698">Nasdaq</text>
+          </svg>
+          <!-- Volkswagen Logo -->
+          <svg class="footer-partner-logo" viewBox="0 0 50 50" width="30" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="25" cy="25" r="23" stroke="#949698" stroke-width="4" fill="none" />
+            <path d="M11 15 L20 38 L25 25 L30 38 L39 15 M15 15 L25 35 L35 15" stroke="#949698" stroke-width="3" fill="none" stroke-linejoin="round" />
+          </svg>
+          <!-- Box Logo -->
+          <svg class="footer-partner-logo" viewBox="0 0 80 30" width="55" xmlns="http://www.w3.org/2000/svg">
+            <text x="0" y="22" font-family="'Inter', sans-serif" font-weight="800" font-size="24" letter-spacing="-1" fill="#949698">box</text>
+          </svg>
+          <!-- NetApp Logo -->
+          <svg class="footer-partner-logo" viewBox="0 0 100 30" width="60" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 25 L10 5 L25 5 L25 25 M35 5 L55 25 L55 5" stroke="#949698" stroke-width="4" fill="none" />
+            <text x="63" y="22" font-family="'Inter', sans-serif" font-weight="700" font-size="16" fill="#949698">NetApp</text>
+          </svg>
+          <!-- Eventbrite Logo -->
+          <svg class="footer-partner-logo" viewBox="0 0 120 30" width="75" xmlns="http://www.w3.org/2000/svg">
+            <text x="0" y="22" font-family="'Inter', sans-serif" font-weight="800" font-size="20" letter-spacing="1" fill="#949698">eventbrite</text>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Links Grid -->
+      <div class="footer-links-grid">
+        <div class="footer-column">
+          <ul>
+            <li><a href="#">Udemy Business</a></li>
+            <li><a href="#">Teach on Udemy</a></li>
+            <li><a href="#">Get the app</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <ul>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Help and Support</a></li>
+            <li><a href="#">Affiliate</a></li>
+            <li><a href="#">Investors</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <ul>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#">Cookie settings</a></li>
+            <li><a href="#">Sitemap</a></li>
+            <li><a href="#">Accessibility statement</a></li>
+          </ul>
+        </div>
+        <div class="footer-column footer-lang-col">
+          <button class="btn btn-lang" id="footer-language-button">
+            <i class="fa-solid fa-globe"></i>
+            <span>English</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <a href="#" class="footer-logo" id="footer-logo-link">
+          <svg viewBox="0 0 91 34" width="91" height="34" xmlns="http://www.w3.org/2000/svg">
+            <!-- Stylised Caret symbol next to text in white -->
+            <g fill="#ffffff">
+              <path d="M12 4 L4 14 h5 v10 h6 v-10 h5 z" transform="translate(-1, 0) scale(0.9)"/>
+            </g>
+            <text x="21" y="24" font-family="'Inter', sans-serif" font-weight="800" font-size="23" fill="#ffffff" letter-spacing="-1.2">udemy</text>
+          </svg>
+        </a>
+        <div class="footer-copyright" id="footer-copyright-text">© 2026 Udemy, Inc.</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
